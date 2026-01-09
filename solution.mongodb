@@ -15,14 +15,14 @@ db.students.insert(
 
 /* Exercise 2: Insert Document with Multiple Fields */
 
-db.students.insert([
+db.students.insert(
   { 
     name:"deep davra",
     department:"IT",
     semester: 4,
     mobile: 1234567890
   }
-])
+);
 
 /* Exercise 3: Array of Simple Values */
 
