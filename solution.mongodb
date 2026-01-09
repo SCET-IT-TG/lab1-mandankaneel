@@ -1,0 +1,86 @@
+/* Exercise 1: Database & Collection Creation */
+
+db = db.getSiblingDB("examDB");
+
+db.students.insert(
+    {
+        name:"neel mandanka",
+        course:"IT"
+    },
+    {
+        name:"manan chovatiya",
+        course:"CO"
+    }
+);
+
+/* Exercise 2: Insert Document with Multiple Fields */
+
+db.students.insert([
+  { 
+    name:"deep davra",
+    department:"IT",
+    semester: 4,
+    mobile: 1234567890
+  }
+])
+
+/* Exercise 3: Array of Simple Values */
+
+db.subjects.insert({
+    course_name:"information technology",
+    subject_list:["CNS","MATHS","EO","NOSQL"]
+});
+
+/* Exercise 4: Array of Objects */
+
+db.faculty.insert({
+    department:"information technology",
+    teachers:[
+        {name:"dr. manan shah",experience:13},
+        {name:"mr. dhaval rana",experience:3}
+    ]
+});
+
+/* Exercise 5: Explicit Primary Key */
+
+db.students.insert({
+    _id: ObjectId(),
+    name:"vishal sheliya",
+    course_name:"MCA"
+});
+
+/* Exercise 6: Duplicate Primary Key Observation */
+
+db.students.insert({
+    _id: ObjectId("12af34567890123456789012"),
+    name:"aman",
+    course_name:"IT"
+});
+
+db.students.insert({
+    _id: ObjectId("12af34567890123456789012"),
+    name:"jeet malaviya",
+    course_name:"Btech"
+});
+
+/* errmsg: "E11000 duplicate key error collection: examDB.students index: _id_ dup key: { _id: ObjectId('12af34567890123456789012') }" */
+
+/* Exercise 7: Multiple Inserts Using insert() */
+
+db.students.insert({
+    name:"krish",
+    course_name:"IT",
+    semester:2
+});
+
+db.students.insert({
+    name:"meet",
+    course_name:"MBA",
+    semester:3
+});
+
+db.students.insert({
+    name:"dev",
+    course_name:"CO",
+    semester:4
+})
