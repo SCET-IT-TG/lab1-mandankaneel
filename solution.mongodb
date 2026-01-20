@@ -5,13 +5,13 @@ db = db.getSiblingDB("examDB");
 db.students.insert(
     {
         name:"neel mandanka",
-        course:"IT",
+        department:"IT",
         semester: 4,
         mobile: "1234567890"
     },
     {
         name:"manan chovatiya",
-        course:"CO",
+        department:"CO",
         semester: 4,
         mobile: "1234567890"
     }
@@ -76,18 +76,15 @@ db.students.insert({
 
 db.students.insert({
     name:"krish",
-    course_name:"IT",
-    semester:2
+    course_name:"IT"
 });
 
 db.students.insert({
     name:"meet",
-    course_name:"MBA",
-    semester:3
+    course_name:"MBA"
 });
 
 db.students.insert({
     name:"dev",
-    course_name:"CO",
-    semester:4
-})
+    course_name:"CO"
+});
