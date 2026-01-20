@@ -5,11 +5,15 @@ db = db.getSiblingDB("examDB");
 db.students.insert(
     {
         name:"neel mandanka",
-        course:"IT"
+        course:"IT",
+        semester: 4,
+        mobile: "1234567890"
     },
     {
         name:"manan chovatiya",
-        course:"CO"
+        course:"CO",
+        semester: 4,
+        mobile: "1234567890"
     }
 );
 
@@ -46,7 +50,8 @@ db.faculty.insert({
 db.students.insert({
     _id: ObjectId(),
     name:"vishal sheliya",
-    course_name:"MCA"
+    course_name:"MCA",
+    mobile: "1234567890"
 });
 
 /* Exercise 6: Duplicate Primary Key Observation */
@@ -54,13 +59,15 @@ db.students.insert({
 db.students.insert({
     _id: ObjectId("12af34567890123456789012"),
     name:"aman",
-    course_name:"IT"
+    course_name:"IT",
+    mobile: "1234567890"
 });
 
 db.students.insert({
     _id: ObjectId("12af34567890123456789012"),
     name:"jeet malaviya",
-    course_name:"Btech"
+    course_name:"Btech",
+     mobile: "1234567890"
 });
 
 /* errmsg: "E11000 duplicate key error collection: examDB.students index: _id_ dup key: { _id: ObjectId('12af34567890123456789012') }" */
